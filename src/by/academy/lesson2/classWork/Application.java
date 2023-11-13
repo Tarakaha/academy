@@ -12,8 +12,8 @@ public class Application {
         isHomeAnimal/setIsHomeAnimal, которые будут возвращать и назначать значение isHomeAnimal соответственно.*/
 
     public static void main(String[] args) {
-        Cat cat1 = new Cat();
-        Cat cat2 = new Cat("Плюшка");
+        Cat cat1 = new Cat("Плюшка");
+        Cat cat2 = new Cat();
 
         cat1.eat();
         cat1.sleep();
@@ -24,7 +24,9 @@ public class Application {
         }
         System.out.println("Возраст кота по кличке " + cat2.getNickname() + " - " + cat2.getAge());
 
-        cat2.setInitials('П');
+        System.out.println(cat2);
+        cat2.setNickname("Мурка");
+        cat2.setInitials('М');
         cat2.setHomeAnimal(true);
         cat2.setMoney(2000);
         System.out.println(cat2);
