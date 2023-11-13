@@ -30,7 +30,7 @@ public class Task1 {
         }
         System.out.println("Введите возраст покупателя");
         ageOfTheBuyer = scanner.nextInt();
-        if (ageOfTheBuyer < 0 | ageOfTheBuyer > 200) {
+        if (ageOfTheBuyer < 0 || ageOfTheBuyer > 200) {
             System.out.println("Введите корректные значения");
             scanner.close();
             System.exit(0);
