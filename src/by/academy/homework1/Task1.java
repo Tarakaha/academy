@@ -35,7 +35,7 @@ public class Task1 {
             scanner.close();
             System.exit(0);
         }
-        double discount = 0;
+        double discount;
 
         /* double finalAmount = purchaseAmount - (purchaseAmount*(discount/100));
             как приколхозить эту формулу? */
