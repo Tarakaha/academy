@@ -1,5 +1,6 @@
 package by.academy.homework2;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -10,7 +11,7 @@ import java.util.Scanner;
 public class Task2 {
     public static void main(String[] args) {
 
-    /* Программа принимает на сравнение минимум 2 слова, после чего выводит слово с минмальным разнообразием символов
+    /* Программа принимает на сравнение минимум 2 слова, после чего выводит слово с минимальным разнообразием символов
        на консоль */
 
         int wordCount;
@@ -38,29 +39,31 @@ public class Task2 {
         String minWord = null;
         String tempWord;
         int charCount = Integer.MAX_VALUE;
-        int count = 0;
+
         for (int i = 0; i < wordCount; i++) {
+            int count = 1;  // Счётчик с единицы потому что да.
+
             System.out.println("Введите слово:");
-            tempWord = scanner.nextLine().toLowerCase().trim();
-            char[] tempChar = tempWord.toCharArray();
-            for (int j = 0; j < tempWord.length(); j++) {
-                for (int k = j + 1; k < tempWord.length() - 1; k++) {
-                    if (tempChar[i] == ' ') {
-                        continue;
-                    }
-                    if (tempChar[i] == tempChar[j]) {
-                        tempChar[i] = ' ';
-                        tempChar[j] = ' ';
-                        ++count;
-                    }
+            tempWord = scanner.next().trim().toLowerCase();
+            char[] letters = tempWord.toCharArray();
+            Arrays.sort(letters);
+
+            for (int j = 0; j < letters.length - 1; j++) {
+                if (letters.length == 1 && charCount != 1) {
+                    count = 1;
+                    break;
                 }
-                if (count < charCount) {
-                    charCount = count;
-                    minWord = tempWord;
+                if (letters[j] != letters[j + 1]) {
+                    count++;
                 }
             }
+            if (count < charCount) {
+                charCount = count;
+                minWord = tempWord;
+            }
         }
-        System.out.println(minWord + ". Количество уникальных символов: " + count);
+
+        System.out.println(minWord + ". Количество уникальных символов: " + charCount);
 
         scanner.close();
     }
