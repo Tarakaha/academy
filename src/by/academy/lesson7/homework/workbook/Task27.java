@@ -11,7 +11,8 @@ import java.util.regex.Pattern;
 public class Task27 {
     public static void main(String[] args) {
 
-        String text = "Какая-то фраза, в которой будут некорректно считаться знаки... Но гном - это гном.";// , ... - .(4)
+        String text = "Какая-то фраза, в которой будут некорректно считаться знаки... Но гном - это гном.";
+        // знаки в тексте: ',' '...' '-' '.'(4)
         String copy = text.replaceAll("\\.+", "\\.")
                 .replaceAll("(?<=\s)-(?=\s)", ":");
 
