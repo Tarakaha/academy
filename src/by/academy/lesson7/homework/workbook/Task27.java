@@ -14,7 +14,7 @@ public class Task27 {
         String text = "Какая-то фраза, в которой будут некорректно считаться знаки... Но гном - это гном.";
         // знаки в тексте: ',' '...' '-' '.'(4)
         String copy = text.replaceAll("\\.+", "\\.")
-                .replaceAll("(?<=\s)-(?=\s)", ":");
+                          .replaceAll("(?<=\s)-(?=\s)", ":");
 
         int counter = 0;
         Matcher matcher = Pattern.compile("[.?!:;,]").matcher(copy);
