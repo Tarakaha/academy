@@ -1,4 +1,4 @@
-package by.academy.homework2.Deal;
+package by.academy.homework2.deal;
 
 public class Players {
 

@@ -1,6 +1,4 @@
-package by.academy.homework2.Deal;
-
-import java.util.Arrays;
+package by.academy.homework2.deal;
 
 public class Showdowm {
     public static void show() throws InterruptedException {
