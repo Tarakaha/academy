@@ -44,7 +44,7 @@ public class Task2 {
             int count = 1;  // Счётчик с единицы потому что да.
 
             System.out.println("Введите слово:");
-            tempWord = scanner.next().trim().toLowerCase();
+            tempWord = scanner.next().trim();
             char[] letters = tempWord.toCharArray();
             Arrays.sort(letters);
 
