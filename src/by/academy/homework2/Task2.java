@@ -25,7 +25,7 @@ public class Task2 {
             if (!check.isEmpty() && check.matches("\\d+")) {
                 wordCount = Integer.parseInt(check);
                 if (wordCount < 2) {
-                    System.out.println("Минимально ожидаемых слов должно быть больше 2х.");
+                    System.out.println("Минимальное количество сравниваемых слов - 2");
                     continue;
                 }
                 break;
