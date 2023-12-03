@@ -12,7 +12,8 @@ public class Task2 {
     public static void main(String[] args) {
 
     /* Программа принимает на сравнение минимум 2 слова, после чего выводит слово с минимальным разнообразием символов
-       на консоль */
+       на консоль 
+       P.S. Программа игнорирует пробельные символы, т.к. визуально учёт итогового вывода усложняется при наличии пробела. При необходимости код может быть переписан.*/
 
         int wordCount;
 
@@ -24,7 +25,7 @@ public class Task2 {
             if (!check.isEmpty() && check.matches("\\d+")) {
                 wordCount = Integer.parseInt(check);
                 if (wordCount < 2) {
-                    System.out.println("Минимально ожидаемых слов должно быть больше 2х.");
+                    System.out.println("Минимальное количество сравниваемых слов - 2");
                     continue;
                 }
                 break;
