@@ -13,16 +13,20 @@ package by.academy.lesson9.homework.telegram.task3;
 //          2. При умножении на число итогом должна быть новая матрица, или замещение старой матрицы результатом умножения?
 
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Matrix a = new Matrix(2,2);
         a.fillInTheMatrix();
-        a.print();
 
         Matrix b = new Matrix(2,2);
         b.fillInTheMatrix();
-        b.print();
 
         Matrix c = a.multiplyWith(b);
+
+        System.out.println("Исходная матрица №1");
+        a.print();
+        System.out.println("Исходная матрица №2");
+        b.print();
+        System.out.println("Итоговая матрица");
         c.print();
 
         Matrix.scanner.close();

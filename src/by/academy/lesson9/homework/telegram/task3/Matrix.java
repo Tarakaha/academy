@@ -16,9 +16,10 @@ public class Matrix {
         this.numbers = new double[lines][columns];
     }
 
-    public void fillInTheMatrix() {
+    public void fillInTheMatrix() throws InterruptedException {
 
-
+        System.out.println("Заполняю матрицу...");
+        Thread.sleep(500);
         int count = 1;
         for (int i = 0; i < lines; i++) {
             for (int j = 0; j < columns; j++) {
@@ -39,13 +40,15 @@ public class Matrix {
         }
     }
 
-    Matrix sumMatrix(Matrix b) {
+    Matrix sumMatrix(Matrix b) throws InterruptedException {
         if (this.getNumbers().length != b.getNumbers().length) {
             System.out.println("Работать можно только с матрицами одной размерности!");
             scanner.close();
             System.exit(0);
         }
         Matrix newMatrix = new Matrix(this.lines, this.columns);
+        System.out.println("Суммирую матрицы...");
+        Thread.sleep(500);
         for (int i = 0; i < lines; i++) {
             for (int j = 0; j < columns; j++) {
                 newMatrix.numbers[i][j] = this.numbers[i][j] + b.numbers[i][j];
@@ -54,8 +57,10 @@ public class Matrix {
         return newMatrix;
     }
 
-    Matrix multiplyWithNum(double num) { // С сохранением старой матрицы
+    Matrix multiplyWithNum(double num) throws InterruptedException { // С сохранением старой матрицы
         Matrix newMatrix = new Matrix(this.lines, this.columns);
+        System.out.println("Умножаю матрицу на число...");
+        Thread.sleep(500);
         for (int i = 0; i <lines; i++) {
             for (int j = 0; j < columns; j++) {
                 newMatrix.numbers[i][j] = this.numbers[i][j] * num;
@@ -72,7 +77,6 @@ public class Matrix {
     }
 
     void print() {
-        System.out.println("Матрица " + this);
         for (int i = 0; i <lines; i++) {
             for (int j = 0; j < columns; j++) {
                 System.out.print(this.numbers[i][j] + "    ");
@@ -82,12 +86,14 @@ public class Matrix {
         }
     }
 
-    Matrix multiplyWith(Matrix b) {
+    Matrix multiplyWith(Matrix b) throws InterruptedException {
         if (this.getNumbers().length != b.getNumbers().length) {
             System.out.println("Работать можно только с матрицами одной размерности!");
             scanner.close();
             System.exit(0);
         }
+        System.out.println("Умножаю матрицы...");
+        Thread.sleep(500);
         Matrix newMatrix = new Matrix(this.lines, this.columns);
         for (int i = 0; i < lines; i++) {
             for (int j = 0; j < columns; j++) {
