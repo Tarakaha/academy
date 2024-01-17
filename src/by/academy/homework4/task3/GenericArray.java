@@ -47,10 +47,6 @@ public class GenericArray<T> {
             return (T) array[0];
         }
 
-        public int arraySize() {
-            return array.length;
-        }
-
         public int indexOfLastElement() {
             return current - 1;
         }
@@ -80,6 +76,6 @@ public class GenericArray<T> {
         public String toString() {
             return "Первый элемент массива: " + (T) array[0] +
                     "\nПоследний элемент массива: " + (T) array[current - 1] +
-                    "\nРазмер массива: " + (current);
+                    "\nЗаполненность массива: " + current + " из: " + array.length;
         }
     }
